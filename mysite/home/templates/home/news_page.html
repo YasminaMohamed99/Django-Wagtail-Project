@@ -1,0 +1,15 @@
+<div class="news-page">
+    <h1>{{ self.title }}</h1>
+    <p>{{ self.date }}</p>
+    <div class="news-content">
+        {{ self.body|richtext }}
+    </div>
+    <div class="pagination">
+        {% if news_pages.has_previous %}
+            <a href="?page={{ news_pages.previous_page_number }}">Previous</a>
+        {% endif %}
+        {% if news_pages.has_next %}
+            <a href="?page={{ news_pages.next_page_number }}">Next</a>
+        {% endif %}
+    </div>
+</div>

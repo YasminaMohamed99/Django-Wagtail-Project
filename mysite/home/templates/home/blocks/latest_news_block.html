@@ -1,0 +1,5 @@
+<div class="latest-news">
+    {% for news_item in self.news %}
+        <a href="{{ news_item.url }}">{{ news_item.title }}</a>
+    {% endfor %}
+</div>
